@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h2>   Create a New SuperHero   </h2>
+        <form method="POST" enctype="multipart/form-data">
+
+            <!-- Security token -->
+            {% csrf_token %}
+
+            <!-- Using the formset -->
+            {{ form.as_p }}
+
+            <input type="submit" value="Submit">
+        </form>
+
+<!--    <form action="{% url 'superheroes:create_new_superhero' %}" method="post">-->
+<!--        {% csrf_token %}-->
+<!--        Name:<input type="text" name="name" id="name"><br>-->
+<!--        Alter Ego:<input type="text" name="alterEgo" id="alterEgo"><br>-->
+<!--        Primary Ability:<input type="text" name="primaryAbility" id="primaryAbility"><br>-->
+<!--        Secondary Ability:<input type="text" name="secondaryAbility" id="secondaryAbility"><br>-->
+<!--        Catchphrase:<input type="text" name="catchphrase" id="catchphrase"><br>-->
+<!--        <input type="submit" value="Add new!">-->
+<!--    </form>-->
+</body>
+</html>
