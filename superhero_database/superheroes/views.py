@@ -23,6 +23,7 @@ def detail(request, superhero_id):
 
 
 # Create view for details
+# Refactored to use forms
 def create(request):
     context = {}
     form = SuperheroForm(request.POST or None, request.FILES or None)
@@ -35,6 +36,7 @@ def create(request):
 
 
 # update view for details
+# Refactored to use forms
 def update(request, superhero_id):
     # dictionary for initial data with
     # field names as keys
@@ -57,6 +59,7 @@ def update(request, superhero_id):
 
 
 # delete view for details
+# Refactored to use forms
 def delete(request, superhero_id):
     # dictionary for initial data with
     # field names as keys
