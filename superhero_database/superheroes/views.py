@@ -1,8 +1,8 @@
 from django.shortcuts import render
-from .models import Superhero
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.shortcuts import get_object_or_404
+from .models import Superhero
 from .forms import SuperheroForm
 
 
@@ -19,7 +19,10 @@ def index(request):
 def detail(request, superhero_id):
     context = {}
     context["superhero"] = Superhero.objects.get(id=superhero_id)
-    return render(request, 'superheroes/detail.html', context)
+    if request.method == 'POST':
+        return HttpResponseRedirect(reverse('superheroes:index'))
+    else:
+        return render(request, 'superheroes/detail.html', context)
 
 
 # Create view for details

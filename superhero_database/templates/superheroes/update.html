@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>  Update Superhero Details  </h2>
+    <form method="POST">
+        <!-- Security token by Django -->
+        {% csrf_token %}
+
+        <!-- form as paragraph -->
+        {{ form.as_p }}
+
+        <input class="btn btn-primary btn-sm" type="submit" value="Update">
+        <a class="btn btn-secondary btn-sm" href="/">Cancel </a>
+    </form>
+
+{% endblock %}
