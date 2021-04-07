@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="card text-center">
+    <div class="card-body">
+        <h1>Welcome to Superhero Database</h1>
+        <p>This is an example of a basic CRUD application</p>
+        <a class="btn btn-dark btn-sm" href="{% url 'superheroes:index' %}">
+            View Current Superheroes
+        </a>
+    </div>
+</div>
+
+{% endblock %}
