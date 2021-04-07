@@ -12,3 +12,7 @@ body {
 .card {
     margin-top: 25px;
 }
+
+.btn-navbar {
+    color: white;
+}
