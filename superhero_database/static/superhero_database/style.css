@@ -1,9 +1,4 @@
-cover {
 
-	background-image: url( "{% static 'images/DuEzgZP.jpg' %}")
-	background-size: cover;
-	text-align: center;
-}
 
 body {
     background: white url("images/DuEzgZP.jpg") no-repeat;
@@ -15,4 +10,13 @@ body {
 
 .btn-navbar {
     color: white;
+}
+
+.card-title {
+    padding-left: 20px;
+}
+
+.add-btn {
+    margin-right: 20px;
+    margin-top: 10px;
 }

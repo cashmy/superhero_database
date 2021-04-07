@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'superheroes.apps.SuperheroesConfig',
     'pages.apps.PagesConfig',
+    'fontawesome_5'
 ]
 
 MIDDLEWARE = [
@@ -136,3 +137,5 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+BUTTONS_FONTAWESOME_VERSION = 5

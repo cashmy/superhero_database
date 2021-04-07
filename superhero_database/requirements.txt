@@ -1,0 +1,11 @@
+asgiref==3.3.3
+Django==3.1.7
+django-appconf==1.0.4
+django-buttons==0.9.2
+django-fontawesome-5==1.0.18
+fontawesome-free==5.15.3
+mysql-connector-python==8.0.23
+protobuf==3.15.7
+pytz==2021.1
+six==1.15.0
+sqlparse==0.4.1
