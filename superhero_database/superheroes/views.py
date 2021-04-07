@@ -8,7 +8,7 @@ from .forms import SuperheroForm
 
 # Initial listing view
 def index(request):
-    all_superheroes = Superhero.objects.all()
+    all_superheroes = Superhero.objects.all().order_by('name')
     context = {
         'all_superheroes': all_superheroes
     }

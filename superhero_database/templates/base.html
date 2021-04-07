@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -9,29 +10,29 @@
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
           crossorigin="anonymous">
-<!--    <link rel="stylesheet"-->
-<!--          type="text/css"-->
-<!--          href="styles/styles.css">-->
+    <link rel="stylesheet"
+          type="text/css"
+          href="{% static 'superhero_database/style.css' %}">
     <title>Superhero Database {% block title%} {% endblock %}</title>
 </head>
+
 <body>
     <!-- NavBar -->
     {% include 'partials/_navbar.html' %}
-        <!-- Background image -->
-<div class="bg-image"
-style="background-image: url('comic-superhero-standing-silhouette.jpg');
-      height: 100vh">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 m-auto">
-                {% block content %}{% endblock %}
+<!--    <img class="img-fluid" src="{% static 'images/DuEzgZP.jpg' %}">-->
+    <!-- Background image -->
+    <div class="cover">
+<!--         style="background-image: url({% static 'images/DuEzgZP.jpg' %}) height: 100vh">-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 m-auto">
+                    {% block content %}{% endblock %}
+                </div>
             </div>
         </div>
+
     </div>
-
-
-</div>
-<!-- Background image -->
+    <!-- Background image -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
