@@ -3,6 +3,13 @@
 {% block content %}
 
 <h2>  Update Superhero Details  </h2>
+
+    {% if error_message %}
+        <p class="alert alert-danger">
+            <strong>{{ error_message }}</strong>
+        </p>
+    {% endif %}
+
     <form method="POST">
         <!-- Security token by Django -->
         {% csrf_token %}

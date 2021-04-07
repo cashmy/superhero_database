@@ -4,6 +4,7 @@
 
 <h2>  Superhero Details  </h2>
     <form method="POST">
+        <!-- Security token by Django -->
         {% csrf_token %}
         <label for="superhero.name">Name: </label>{{ superhero.name }} <br>
         <label for="superhero.alterEgo">Alter Ego: </label>{{ superhero.alterEgo }}<br>

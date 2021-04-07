@@ -3,6 +3,13 @@
 {% block content %}
 
 <h2>   Delete a Superhero   </h2>
+
+    {% if error_message %}
+        <p class="alert alert-danger">
+            <strong>{{ error_message }}</strong>
+        </p>
+    {% endif %}
+
 <div class="main">
     <!-- Create a Form -->
     <form method="POST">

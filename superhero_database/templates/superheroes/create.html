@@ -3,6 +3,13 @@
 {% block content %}
 
 <h2>   Create a New SuperHero   </h2>
+
+    {% if error_message %}
+        <p class="alert alert-danger">
+            <strong>{{ error_message }}</strong>
+        </p>
+    {% endif %}
+
         <form method="POST" enctype="multipart/form-data">
 
             <!-- Security token -->
@@ -11,7 +18,8 @@
             <!-- Using the formset -->
             {{ form.as_p }}
 
-            <input type="submit" value="Submit">
+            <input class="btn btn-primary btn-sm" type="submit" value="Submit">
+            <a class="btn btn-secondary btn-sm" href="/">Cancel </a>
         </form>
 
 {% endblock %}
