@@ -1,5 +1,14 @@
 cover {
-	background: url('../static/images/DuEzgZP.jpg');
+
+	background-image: url( "{% static 'images/DuEzgZP.jpg' %}")
 	background-size: cover;
 	text-align: center;
+}
+
+body {
+    background: white url("images/DuEzgZP.jpg") no-repeat;
+}
+
+.card {
+    margin-top: 25px;
 }

@@ -1,25 +1,26 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<div>
-        <h2> List of Heroes! </h2>
-            <a class="btn btn-primary btn-sm" href="create/" role="button"> Add </a>
-
-</div>
-<ul>
-    {% for superhero in all_superheroes %}
-    <li>
-        <h4> {{ superhero.name }} </h4>
+<div class="card">
+    <div class="card-body">
         <div>
-            <a href="{% url 'superheroes:detail' superhero.id %}">See more info</a>
-            <a href="{% url 'superheroes:update' superhero.id %}">Edit</a>
-            <a href="{% url 'superheroes:delete' superhero.id %}">Delete</a>
+                <h2> List of Heroes! </h2>
+                    <a class="btn btn-primary btn-sm" href="create/" role="button"> Add </a>
+
         </div>
-    </li>
-    {% endfor %}
-</ul>
-{% load static %}
-<img src="{% static 'superheros/comic.superhero.standing.silhouette.jpg' %}" alt="My image">
+        <ul>
+            {% for superhero in all_superheroes %}
+            <li>
+                <h5> {{ superhero.name }} </h5>
+                <div>
+                    <a href="{% url 'superheroes:detail' superhero.id %}">See more info</a>
+                    <a href="{% url 'superheroes:update' superhero.id %}">Edit</a>
+                    <a href="{% url 'superheroes:delete' superhero.id %}">Delete</a>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
 
 {% endblock %}

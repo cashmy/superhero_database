@@ -1,17 +1,19 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<h2>  Superhero Details  </h2>
-    <form method="POST">
-        <!-- Security token by Django -->
-        {% csrf_token %}
-        <label for="superhero.name">Name: </label>{{ superhero.name }} <br>
-        <label for="superhero.alterEgo">Alter Ego: </label>{{ superhero.alterEgo }}<br>
-        <label for="superhero.primaryAbility">Primary Ability: </label>{{ superhero.primaryAbility }}<br>
-        <label for="superhero.secondaryAbility">Secondary Ability: </label>{{ superhero.secondaryAbility }}<br>
-        <label for="superhero.catchphrase">Catchphrase: </label>{{ superhero.catchphrase }}<br><br>
-        <input class="btn btn-secondary btn-sm"  type="submit" value="Exit">
-    </form>
-
+<div class="card text-center">
+    <div class="card-body">
+        <h2>  Superhero Details  </h2>
+            <form method="POST">
+                <!-- Security token by Django -->
+                {% csrf_token %}
+                <label for="superhero.name">Name: </label>{{ superhero.name }} <br>
+                <label for="superhero.alterEgo">Alter Ego: </label>{{ superhero.alterEgo }}<br>
+                <label for="superhero.primaryAbility">Primary Ability: </label>{{ superhero.primaryAbility }}<br>
+                <label for="superhero.secondaryAbility">Secondary Ability: </label>{{ superhero.secondaryAbility }}<br>
+                <label for="superhero.catchphrase">Catchphrase: </label>{{ superhero.catchphrase }}<br><br>
+                <input class="btn btn-secondary btn-sm"  type="submit" value="Exit">
+            </form>
+    </div>
+</div>
 {% endblock %}

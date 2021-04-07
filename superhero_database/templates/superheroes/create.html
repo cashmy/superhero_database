@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="card text-center">
+    <div class="card-body">
+        <h2>   Create a New SuperHero   </h2>
 
-<h2>   Create a New SuperHero   </h2>
-
-    {% if error_message %}
-        <p class="alert alert-danger">
-            <strong>{{ error_message }}</strong>
-        </p>
-    {% endif %}
+        {% if error_message %}
+            <p class="alert alert-danger">
+                <strong>{{ error_message }}</strong>
+            </p>
+        {% endif %}
 
         <form method="POST" enctype="multipart/form-data">
 
@@ -21,5 +22,6 @@
             <input class="btn btn-primary btn-sm" type="submit" value="Submit">
             <a class="btn btn-secondary btn-sm" href="/">Cancel </a>
         </form>
-
+    </div>
+</div>
 {% endblock %}
