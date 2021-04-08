@@ -1,19 +1,35 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="card text-center">
-    <div class="card-body">
-        <h2>  Superhero Details  </h2>
-            <form method="POST">
-                <!-- Security token by Django -->
-                {% csrf_token %}
-                <label for="superhero.name">Name: </label>{{ superhero.name }} <br>
-                <label for="superhero.alterEgo">Alter Ego: </label>{{ superhero.alterEgo }}<br>
-                <label for="superhero.primaryAbility">Primary Ability: </label>{{ superhero.primaryAbility }}<br>
-                <label for="superhero.secondaryAbility">Secondary Ability: </label>{{ superhero.secondaryAbility }}<br>
-                <label for="superhero.catchphrase">Catchphrase: </label>{{ superhero.catchphrase }}<br><br>
-                <input class="btn btn-secondary btn-sm"  type="submit" value="Exit">
-            </form>
+<form method="POST">
+    <!-- Security token by Django -->
+    {% csrf_token %}
+    <div class="card">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text text-center"> ... some picture here ... </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-detail card-body">
+                            <h5 class="card-title text-center">{{ superhero.name }}</h5>
+                            <p class="card-text">Alter Ego:  {{ superhero.alterEgo }}</p>
+                            <p class="card-text">Primary Ability:  {{ superhero.primaryAbility }}</p>
+                            <p class="card-text">Secondary Ability:  {{ superhero.secondaryAbility }}</p>
+                            <p class="card-text">Catchphrase:  {{ superhero.catchphrase }}</p>
+                        </div>
+                        <div class="card-footer text-right">
+                            <input class="btn btn-secondary btn-sm"  type="submit" value="Exit">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</form>
 {% endblock %}
